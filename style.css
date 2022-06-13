@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins' sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+  list-style: none;  
+}
+
+header{
+    display: flex;
+    background-color: #222831;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+    height: 60px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 50px;
+    border-radius: 50%;
+    margin-right:10px;
+}
+
+.header__logo{
+    color: #eeeeee;
+    font-weight: 600;
+}
+
+.nav__list{
+    display: flex;
+    align-items: center;
+}
+
+.nav__item{
+    margin: 0 8px;
+}
+.nav__link{
+    padding: 10px;
+    color: #eeee;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 5px;
+}
+.nav__link:hover{
+    background-color: #00adb5;
+}
+.header__toggle,.header__close{
+    display: none;
+}
+@media screen and (max-width:768px){
+        header{
+            height: 48px;
+            justify-content: space-between;
+            padding: 0 28px;
+        }
+        .logo a{
+            font-size: 0.9rem;
+        }
+        .logo img{
+            width: 30px;
+        }
+        .header__toggle{
+            display: inline;
+            color: #eeee;
+            font-size: 24px;
+        }
+        .header__close{
+            position: absolute;
+            right: 24px;
+            display: block;
+            font-size: 24px;
+            border-radius: 50%;
+        }
+        .header__close:hover{
+            background-color: #00adb5;
+        }
+        .nav{
+            position: fixed;
+            top: 0;
+            right: -100%;
+            background-color: #222831;
+            color: #eeee;
+            width: 60%;
+            height: 100vh;
+            padding: 24px 0;
+            z-index: 100;
+            transition: 0.5s;
+        }
+        .nav__list{
+            display: flex;
+            flex-direction: column;
+        }
+        .nav__item{
+            margin: 2rem 0;
+        }
+        .show{
+            right: 0;
+
+        }
+
+}
